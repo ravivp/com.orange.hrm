@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRMSuite" verbose="5">
+
+  <listeners>
+   <listener class-name="com.orange.hrm.ess.utilities.OHTC05_orange_hrm_ess_listner"></listener>
+ </listeners>
+  <test thread-count="5" name="ESSTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+    
+      <class name="com.orange.hrm.ess.module.testcase.OCT00_orange_hrm_admin_login"/>
+     <!--  <class name="com.orange.hrm.ess.module.testcase.OHT05_orange_hrm_admin_verify_AllLinks"/> -->
+      <class name="com.orange.hrm.ess.module.testcase.ODT00_orange_hrm_create_ess_user_by_admin"/>
+      <class name="com.orange.hrm.ess.module.testcase.OHT01_orange_hrm_ess_login_testcases"/>
+      <class name="com.orange.hrm.ess.module.testcase.OHT02_orange_hrm_ess_myinfo_testcases"/>
+      <class name="com.orange.hrm.ess.module.testcase.OHT021_orange_hrm_ess_myinfo_conatct_details_testcase"/>
+      <class name="com.orange.hrm.ess.module.testcase.OHT04_orange_hrm_ess_SwitchTo_NewWindow"/>
+      
+    </classes>
+  </test> <!-- ESSTest taskkill /f /im chromedriver.exe--> 
+</suite> <!-- OrangeHRMSuite -->
